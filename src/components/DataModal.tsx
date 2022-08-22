@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography, CardHeader, Table, TableRow, TableCell } from '@mui/material';
+import { Card, CardContent, Typography, CardHeader, Table, TableRow, TableCell, TableBody } from '@mui/material';
 import React from 'react'
 import { LaunchData } from '../interfaces';
 
@@ -21,38 +21,40 @@ const DataModal = ({ data: { name, date_utc, rocket, details, success, launchpad
             </CardHeader>
             <CardContent>
                 <Table>
-                    <TableRow>
-                        <TableCell colSpan={4}>
-                            <Typography>
-                                Date:
-                            </Typography>
-                        </TableCell>
-                        <TableCell colSpan={4}> <>{date_utc}</></TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell colSpan={4}>
-                            <Typography>
-                                Rocket ID:
-                            </Typography>
-                        </TableCell>
-                        <TableCell colSpan={4}> {rocket}</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell colSpan={4}>
-                            <Typography>
-                                Success:
-                            </Typography>
-                        </TableCell>
-                        <TableCell colSpan={4}> {success.toString()}</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell colSpan={4}>
-                            <Typography>
-                                Launchpad ID:
-                            </Typography>
-                        </TableCell>
-                        <TableCell colSpan={4}> {launchpad}</TableCell>
-                    </TableRow>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell colSpan={4}>
+                                <Typography>
+                                    Date:
+                                </Typography>
+                            </TableCell>
+                            <TableCell colSpan={4}> <>{date_utc}</></TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell colSpan={4}>
+                                <Typography>
+                                    Rocket ID:
+                                </Typography>
+                            </TableCell>
+                            <TableCell colSpan={4}> {rocket}</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell colSpan={4}>
+                                <Typography>
+                                    Success:
+                                </Typography>
+                            </TableCell>
+                            <TableCell colSpan={4}> {success.toString()}</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell colSpan={4}>
+                                <Typography>
+                                    Launchpad ID:
+                                </Typography>
+                            </TableCell>
+                            <TableCell colSpan={4}> {launchpad}</TableCell>
+                        </TableRow>
+                    </TableBody>
                 </Table>
             </CardContent>
         </Card>

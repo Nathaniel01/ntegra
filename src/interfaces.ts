@@ -13,8 +13,5 @@ export interface Column {
     minWidth?: number;
     maxWidth?: number;
     align?: 'right' | 'left';
-    //format?: (value: number) => string;
   }
-
-// export interface Data
 

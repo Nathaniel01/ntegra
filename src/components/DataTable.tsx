@@ -52,10 +52,9 @@ export default function DataTable() {
   };
 
   const init = () => {
-    console.log("Initializing app...")
     fetchData()
       .catch((e) => {
-        setErrorMessage("Error loading data") // show notification.
+        setErrorMessage("Error loading data.")
       })
       .then((res) => {
         setData(res as LaunchData[]);
@@ -67,12 +66,12 @@ export default function DataTable() {
   }, []);
 
   return (
-    <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-      <TableContainer sx={{ maxHeight: 880 }}>
-        <Table stickyHeader aria-label="sticky table">
+    <Paper sx={{ width: '100%', overflow: 'hidden' }} id="paper">
+      <TableContainer sx={{ maxHeight: 880 }} id="table_group">
+        <Table stickyHeader aria-label="sticky table" id="table">
           <TableHead>
             <TableRow>
-              {columns.map((column) => (
+              {columns.map((column, key) => (
                 <TableCell
                   key={column.id}
                   align={column.align}
@@ -115,6 +114,7 @@ export default function DataTable() {
         onClose={() => setOpen(false)}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        role="alert"
       >
         <>
           {modalData &&
@@ -130,6 +130,7 @@ export default function DataTable() {
         page={page}
         onPageChange={(ev, newPage) => setPage(newPage)}
         onRowsPerPageChange={handleChangeRowsPerPage}
+        role="navigation"
       />
     </Paper>
   );
