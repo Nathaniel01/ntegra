@@ -54,6 +54,14 @@ const DataModal = ({ data: { name, date_utc, rocket, details, success, launchpad
                             </TableCell>
                             <TableCell colSpan={4}> {launchpad}</TableCell>
                         </TableRow>
+                        <TableRow>
+                            <TableCell colSpan={4}>
+                                <Typography>
+                                    Details:
+                                </Typography>
+                            </TableCell>
+                            <TableCell colSpan={4}> {details ? details : "N/A"}</TableCell>
+                        </TableRow>
                     </TableBody>
                 </Table>
             </CardContent>

@@ -10,10 +10,6 @@ Afterwards. Run 'npm start' in the project directory to start the local server.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
 
 
-
-
-
-
 ## Dependencies and frameworks used.
 The following is a list of all the depedencies and framework used in the application.\
 * [React JS](https://reactjs.org/): This is the framework which the application is built upon.
